@@ -17,3 +17,17 @@
 - Error Handling
 - HTTPs
 - Tree Shaking - remove unused code
+
+# Food Ordering App
+- Header
+ - Logo
+ - Navigation
+- Body
+ - Search
+ - Restaurant Container
+    - Restaurant Card
+- Footer
+ - Copyright
+ - Links
+ - Address
+ - Contact
