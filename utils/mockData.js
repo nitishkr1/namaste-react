@@ -1,5 +1,4 @@
-const restObj = {
-    "restaurants": [
+const restObj = [
       {
         "info": {
           "id": "691733",
@@ -920,6 +919,5 @@ const restObj = {
         "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
       }
     ]
-  }
-
+    
 export default restObj;
