@@ -33,3 +33,9 @@
  - Contact
 
 Two type of Export/Import
+- default export/import
+ Ex. - export default component_name;
+     - import component_name from './component_name'
+- named export/import
+ Ex. - export const component_name = () => { //function code }
+     - import { component_name } from './component_name' 
