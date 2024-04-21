@@ -24,18 +24,18 @@ const Header = () => {
 
 const RestaurantCard = (props) => {
   console.log(props);
-  const { cuisine, resName, rating, address } = props;
+  const { name, cuisines, avgRating, areaName, sla, cloudinaryImageId } = props?.resData?.restaurants[0]?.info;
   return (
     <div className="res-card">
       <img
-        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/x7bcibhxfnrupph6bcft"
+        src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+cloudinaryImageId}
         className="res-logo"
         alt="res-logo"
       />
-      <h3>{resName}</h3>
-      <h4>{cuisine}</h4>
-      <h4>{rating} Star 35-40 mins</h4>
-      <h4>{address}</h4>
+      <h3>{name}</h3>
+      <h4>{cuisines.join(', ')}</h4>
+      <h4>{avgRating} Star {sla?.slaString}</h4>
+      <h4>{areaName}</h4>
     </div>
   );
 };
@@ -969,24 +969,7 @@ const Body = () => {
     <div className="body">
       <div className="search">Search</div>
       <div className="res-container">
-        <RestaurantCard
-          cuisine="North Indian, Cake, Sweets"
-          resName="Meghna Foods"
-          rating="4.5"
-          address="Test Address1"
-        />
-        <RestaurantCard
-          cuisine="American, Beverages, Desserts"
-          resName="KFC"
-          rating="4.2"
-          address="Test Address2"
-        />
-        <RestaurantCard
-          cuisine="Biryani, Chole Bhatoore"
-          resName="Nazeer Foods"
-          rating="4.1"
-          address="Test Address3"
-        />
+        <RestaurantCard resData={restObj} />
       </div>
     </div>
   );
